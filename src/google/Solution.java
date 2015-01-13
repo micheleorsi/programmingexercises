@@ -4,6 +4,18 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+/**
+ * 1) write a function that calculates power to n of a number
+ * 2) let's assume you cannot use the Math.pow()
+ * 3) time/space complexity
+ * 4) how would you deal with stack overflow? how you prevent it?
+ * 5) can we do better?
+ * 6) space/time complexity?
+ * 7) java integer is 32 bits and we have a log function, can we say something more about complexity?
+ * 
+ * @author micheleorsi
+ *
+ */
 public class Solution {
 
 	@Test
