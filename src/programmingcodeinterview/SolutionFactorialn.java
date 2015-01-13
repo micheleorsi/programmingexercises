@@ -1,7 +1,7 @@
 /**
  * 
  */
-package programmingcodeinterview.factorialn;
+package programmingcodeinterview;
 
 import static org.junit.Assert.*;
 
@@ -13,7 +13,7 @@ import org.junit.*;
  * @author micheleorsi
  *
  */
-public class Solution {
+public class SolutionFactorialn {
 	
 	@Test
 	public void testFactorial() {

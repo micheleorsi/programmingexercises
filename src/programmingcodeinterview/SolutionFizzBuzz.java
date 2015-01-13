@@ -1,7 +1,7 @@
 /**
  * 
  */
-package programmingcodeinterview.fizzbuzz;
+package programmingcodeinterview;
 
 import java.io.*;
 import java.util.*;
@@ -9,7 +9,7 @@ import java.text.*;
 import java.math.*;
 import java.util.regex.*;
 
-public class Solution {
+public class SolutionFizzBuzz {
 
     public static void main(String[] args) {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
