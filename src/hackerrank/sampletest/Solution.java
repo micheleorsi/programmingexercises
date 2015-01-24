@@ -24,7 +24,6 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
         String inputString = sc.nextLine();
         System.out.println(Solution.evaluate(inputString));
-
 	}
 	
 	public static int evaluate(String string) {
@@ -82,12 +81,12 @@ public class Solution {
 		assertEquals(200, Solution.doOperations("200"));
 		assertEquals(6, Solution.doOperations("4+2"));
 		assertEquals(2, Solution.doOperations("4/2"));
-		assertEquals(20, Solution.doOperations("10*2"));
-		assertEquals(80, Solution.doOperations("200-120"));
-		assertEquals(60, Solution.doOperations("40*3/2"));
-		assertEquals(40, Solution.doOperations("10/5*10*20/10"));
-		assertEquals(800, Solution.doOperations("14*2/7*10*20"));
-		assertEquals(33, Solution.doOperations("14+2+7-10+20"));
+		assertEquals(10*2, Solution.doOperations("10*2"));
+		assertEquals(200-120, Solution.doOperations("200-120"));
+		assertEquals(40*3/2, Solution.doOperations("40*3/2"));
+		assertEquals(10/5*10*20/10, Solution.doOperations("10/5*10*20/10"));
+		assertEquals(14*2/7*10*20, Solution.doOperations("14*2/7*10*20"));
+		assertEquals(14+2+7-10+20, Solution.doOperations("14+2+7-10+20"));
 	}
 	
 	@Test
