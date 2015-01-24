@@ -94,7 +94,6 @@ public class Solution {
 	public void test2() {
 		assertEquals(185, Solution.evaluate("10+40*3/2+10*44/4+5"));
 		assertEquals(1375, Solution.evaluate("1100-40*4/2+100*14/4+5"));
-//		assertEquals(286, Solution.evaluate("11-40*4/2+100*14/4+5"));
 	}
 
 }
