@@ -1,7 +1,7 @@
 /**
  * 
  */
-package crackingcodinginterview5.chapter8.sub1;
+package crackingcodinginterview5.chapter8.cap1arrayandstring;
 
 import static org.junit.Assert.*;
 
