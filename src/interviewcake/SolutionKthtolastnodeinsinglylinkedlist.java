@@ -32,6 +32,8 @@ public class SolutionKthtolastnodeinsinglylinkedlist {
 
 		assertEquals("Devil's Food", kth_to_last_node_nsquared2(2, a).name);
 		assertEquals("Devil's Food", kth_to_last_node_n(2, a).name);
+//		assertEquals("Devil's Food", kToLast(2, a).name);
+//		assertEquals("Devil's Food", kToLast2(2, a).name);
 
 	}
 	
