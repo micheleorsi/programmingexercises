@@ -22,7 +22,7 @@ public class SolutionAllUniqueChar1_1 {
 	
 	public boolean allUnique_withArray(String string) {
 		// input validation .. 
-		boolean[] str_value = new boolean[256];
+		boolean[] str_value = new boolean[256]; // assume ASCII
 		for(int i=0; i<256; i++) {
 			str_value[i]=false;
 		}
