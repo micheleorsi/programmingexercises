@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author micheleorsi
  *
  */
-public class DeleteANodeInTheMiddle {
+public class DeleteANodeInTheMiddle2_3 {
 
 	@Test
 	public void test() {
