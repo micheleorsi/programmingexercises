@@ -18,7 +18,7 @@ import org.junit.Test;
  * @author micheleorsi
  *
  */
-public class RemoveDuplicateFromUnsortedList2_1 {
+public class Ex2_1RemoveDuplicateFromUnsortedList {
 
 	@Test
 	public void test() {

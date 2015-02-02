@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author micheleorsi
  *
  */
-public class FindKthElement2_2 {
+public class Ex2_2FindKthElement {
 
 	@Test
 	public void test() {
