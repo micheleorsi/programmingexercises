@@ -13,7 +13,7 @@ import org.junit.Test;
  * @author micheleorsi
  *
  */
-public class CheckPermutationString1_3 {
+public class Ex1_3CheckPermutationString {
 
 	public boolean isPermutation(String string1, String string2) {
 		// input validation

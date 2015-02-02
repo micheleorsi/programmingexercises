@@ -17,7 +17,7 @@ import org.junit.Test;
  * @author micheleorsi
  *
  */
-public class SolutionAllUniqueChar1_1 {
+public class Ex1_1SolutionAllUniqueChar {
 
 	
 	public boolean allUnique_withArray(String string) {
