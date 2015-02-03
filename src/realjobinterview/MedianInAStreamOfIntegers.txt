@@ -1,0 +1,2 @@
+- in case of I have a stream of integers not ordered I want an algorithm/data structure that
+allows me to have access to the median in constant time and maintain sorted the list of integers
