@@ -63,4 +63,34 @@ public class Fibonacci {
 			return temp;
 		}
 	}
+
+	@Test
+	public void test_optimal() {
+		assertEquals(0, fibonacci_optimal(0));
+		assertEquals(1, fibonacci_optimal(1));
+		assertEquals(1, fibonacci_optimal(2));
+		assertEquals(2, fibonacci_optimal(3));
+		assertEquals(3, fibonacci_optimal(4));
+		assertEquals(5, fibonacci_optimal(5));
+		assertEquals(8, fibonacci_optimal(6));
+		assertEquals(13, fibonacci_optimal(7));
+		assertEquals(21, fibonacci_optimal(8));
+		assertEquals(34, fibonacci_optimal(9));
+		assertEquals(55, fibonacci_optimal(10));
+	}
+
+	public int fibonacci_optimal(int n) {
+		if(n<2) {
+			return n;
+		}
+		int previous = 1;
+		int previousPrevious = 0;
+		int actual = 0;
+		for(int i=1; i<n; i++) {
+			actual = previous + previousPrevious;
+			previousPrevious = previous;
+			previous = actual;
+		}
+		return actual;
+	}
 }
