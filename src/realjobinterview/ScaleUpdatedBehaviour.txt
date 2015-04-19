@@ -1,0 +1,25 @@
+Sample Input (for each customer, product history)
+C1,A,B,C
+C2,B,A
+C3,A,D,B
+C4,A
+C5,E
+
+Preprocessing step (done once). Build inverted index (for each product, who bought it):
+A,C1(0),C3(0),C4(0),C2(1)
+B,C2(0),C1(1),C3(2)
+C,C1(2)
+D,C3(1)
+E,C5(0)
+Note that for each customer I keep the index (tra parentesi) of the product position in the history
+
+Sample Pattern: A,B
+Who bought A?
+C5 discarded.
+candidates = C1,C3,C4,C2
+Who bought B after A?
+C4 discarded because he didn't buy B.
+C2 discarded because B index (0) < A index (1).
+result = C1,C3
+
+Something like that! Implementation might be tricky but you can be fast with hashstuff.

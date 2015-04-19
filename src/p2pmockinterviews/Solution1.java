@@ -1,6 +1,7 @@
 package p2pmockinterviews;
 
 import static org.junit.Assert.*;
+
 import org.junit.Test;
 
 /**
