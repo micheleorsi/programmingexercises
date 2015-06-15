@@ -8,6 +8,8 @@ import org.junit.Test;
 
 /**
  * 
+ * https://www.interviewcake.com/question/stock-price
+ * 
  * I have an array stock_prices_yesterday where:
  * 
  * The indices are the time in minutes past trade opening time, which was 9:30am local time.

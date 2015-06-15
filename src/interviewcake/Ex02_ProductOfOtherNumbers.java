@@ -4,6 +4,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
+ * 
+ * https://www.interviewcake.com/question/product-of-other-numbers
+ * 
  * You have an array of integers, and for each index you want to find the product 
  * of every integer except the integer at that index
  * 
@@ -36,28 +39,24 @@ public class Ex02_ProductOfOtherNumbers {
 //		return returnArray;
 //	}
 	
-	// time: O(3n) -> O(n)
-	// space: O(3n) -> O(n)
+	// time: O(2n) -> O(n)
+	// space: O(n) -> O(n)
 	public int[] productOfTheOtherNumber(int[] input) {
 		if(input.length==0) {
 			return new int[]{};
 		}
-		int leftProduct[] = new int[input.length];
-		leftProduct[0]=1;
-		for(int i=1; i<input.length; i++) {
-			leftProduct[i]= leftProduct[i-1]*input[i-1];
-		}
-
-		int rightProduct[] = new int[input.length];
-		rightProduct[input.length-1]=1;
-		for(int i=input.length-2; i>=0; i--) {
-			rightProduct[i]= rightProduct[i+1]*input[i+1];
-		}
-
 		int result[] =  new int[input.length];
-		for(int i=0; i<input.length; i++) {
-			result[i]= leftProduct[i]* rightProduct[i];
+		result[0]=1;
+		for(int i=1; i<input.length; i++) {
+			result[i]= result[i-1]*input[i-1];
 		}
+
+		int rightProduct = 1;
+		for(int i=input.length-2; i>=0; i--) {
+			rightProduct = rightProduct*input[i+1];
+			result[i]= result[i]*rightProduct;
+		}
+
 		return result;
 	}
 	
