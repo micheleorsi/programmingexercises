@@ -5,11 +5,11 @@ package codility.lessons;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.junit.Test;
 
 /**
+ * Problem with 2-lenght array
+ * 
  * @author morsi
  *
  */
