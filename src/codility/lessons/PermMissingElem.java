@@ -7,13 +7,13 @@ import org.junit.Test;
 public class PermMissingElem {
 
 	public int solution(int[] A) {
-		int expectedSum = ((A.length+1)*(A.length+2))/2;
-		int realSum = 0;
+		long expectedSum = ((A.length+1)*(A.length+2))/2;
+		long realSum = 0;
 		
 		for (int i : A) {
-			realSum+=i;
+			realSum = realSum + new Long(i);
 		}
-		return expectedSum-realSum;
+		return new Long(expectedSum-realSum).intValue();
 	}
 	
 	@Test
@@ -22,5 +22,10 @@ public class PermMissingElem {
 		assertEquals(5, solution(new int[] {2, 3, 4, 1}));
 		assertEquals(1, solution(new int[] {2}));
 		assertEquals(2, solution(new int[] {1}));
+		int test[] = new int[99999];
+		for(int i=0; i<test.length; i++) {
+			test[i] = i+1;
+		}
+		assertEquals(100000, solution(test));
 	}
 }
