@@ -170,7 +170,7 @@ public class Ex1 {
 		assertEquals("IMPOSSIBLE", solution("nieee", "nice"));
 		
 		// SWAP
-//		assertEquals("SWAP o r", solution("form", "from"));
+		assertEquals("SWAP o r", solution("form", "from"));
 		assertEquals("SWAP r m", solution("form", "fomr"));
 		assertEquals("SWAP l e", solution("michele", "micheel"));
 		assertEquals("SWAP m i", solution("michele", "imchele"));
