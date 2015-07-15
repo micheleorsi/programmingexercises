@@ -21,24 +21,35 @@ public class Ex2 {
 		    	  checkAdj = "DIFF_FROM_PREV";
 		      }
 		      // if the actual is different from the following one
-		      
-		      else if (i+1 < A.length && 
+		      if (i+1 < A.length && 
 		    		  A[i] != A[i+1]) {
 		    	  checkAdj = "DIFF_FROM_NEXT";
 		      }
 		    }
 		  }
 		switch(checkAdj) {
-			case "DEFAULT": return numberOfPairs - 1;
-			case "DIFF_FROM_PREV": return numberOfPairs;
+			case "DIFF_FROM_PREV": return numberOfPairs+1;
 			case "DIFF_FROM_NEXT": return numberOfPairs+2;
+			default: return numberOfPairs;
 		}
-		return numberOfPairs;
 	}
 	
 	@Test
 	public void test() {
+		assertEquals(1, solution(new int[] {1,1}));
+		assertEquals(1, solution(new int[] {1,0}));
+		assertEquals(1, solution(new int[] {0,1}));
+		assertEquals(2, solution(new int[] {1,1,1}));
+		assertEquals(2, solution(new int[] {1,0,1}));
+		assertEquals(2, solution(new int[] {1,0,0}));
+		assertEquals(7, solution(new int[] {1,1,1,1,1,1,1,1}));
+		assertEquals(7, solution(new int[] {0,0,0,0,0,0,0,0}));
+		assertEquals(7, solution(new int[] {0,0,0,0,0,0,0,1}));
+		assertEquals(7, solution(new int[] {1,0,0,0,0,0,0,0}));
+		assertEquals(7, solution(new int[] {0,0,0,1,0,0,0,0}));
+		assertEquals(7, solution(new int[] {1,1,1,0,1,1,1,1}));
 		assertEquals(5, solution(new int[] {1,1,0,1,0,0,1,1}));
+		
 
 	}
 

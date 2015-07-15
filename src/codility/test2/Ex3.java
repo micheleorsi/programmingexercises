@@ -42,7 +42,6 @@ public class Ex3 {
 		assertEquals(5, solution(new int[]{5,4,4,5,5,0,12}));
 		assertEquals(5, solution(new int[]{1,2,3,5,4,4,5,5,0,12}));
 		assertEquals(6, solution(new int[]{1,2,3,4,5,4,4,5,5,0,12}));
-		
 		assertEquals(4, solution(new int[]{2147483647,2147483646,2147483646,2147483647,0,12}));
 
 	}
