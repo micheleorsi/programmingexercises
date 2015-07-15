@@ -1,4 +1,4 @@
-package codility.lessons;
+package codility.lesson1;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
