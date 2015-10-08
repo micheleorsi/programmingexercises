@@ -38,5 +38,41 @@ Example output:
  *
  */
 public class GameOfLife {
+	
+	protected String input = null;
+	protected Cell[] cells = null;
+	protected int numberOfRow = -1;
+	protected int numberOfColumn = -1;
+
+	public GameOfLife(String input) {
+		this.input = input;
+		numberOfRow = input.split("\n").length;
+		numberOfColumn = input.split("\n")[0].length();
+		cells = new Cell[this.sizeOfInput()];
+		int counter = 0;
+		for (char c : input.toCharArray()) {
+			if(c!='\n') {
+				cells[counter] = new Cell(c);
+				counter++;
+			}
+		}
+	}
+
+	public int sizeOfInput() {
+		return this.numberOfRow*this.numberOfColumn;
+	}
+
+	public int sizeOfRow() {
+		return numberOfRow;
+	}
+
+	public int sizeOfColumn() {
+		return numberOfColumn;
+	}
+
+	public Cell selectSpecificCell(int indexRow, int indexColumn) {
+		int index = ((indexRow) * numberOfColumn ) + indexColumn;
+		return cells[index];
+	}
 
 }
