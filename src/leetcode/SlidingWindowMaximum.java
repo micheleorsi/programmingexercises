@@ -17,6 +17,16 @@ public class SlidingWindowMaximum {
 	}
 	
 	@Test
+	public void test4() {
+		int[] testArray = {1,3,1,2,0,5};
+		int[] returnArray = this.maxSlidingWindow(testArray, 3);
+		assertEquals(3,returnArray[0]);
+		assertEquals(3,returnArray[1]);
+		assertEquals(2,returnArray[2]);
+		assertEquals(5,returnArray[3]);
+	}
+	
+	@Test
 	public void test2() {
 		int[] testArray = {1};
 		int[] returnArray = this.maxSlidingWindow(testArray, 1);
