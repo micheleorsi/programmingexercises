@@ -1,13 +1,12 @@
 package leetcode;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class SlidingWindowMaximum {
+	int[] test = new int[3];
 	
 	@Test
 	public void test() {
@@ -23,36 +22,31 @@ public class SlidingWindowMaximum {
 		int[] returnArray = this.maxSlidingWindow(testArray, 1);
 		assertEquals(1,returnArray[0]);
 	}
-    
-    public int[] maxSlidingWindow(int[] nums, int k) {
+	
+	@Test
+	public void test3() {
+		int[] testArray = {};
+		int[] returnArray = this.maxSlidingWindow(testArray, 1);
+		assertEquals(0,returnArray.length);
+	}
+	
+	public int[] maxSlidingWindow(int[] nums, int k) {
         if(nums.length==0) {
             return new int[0];
         }
 	    int[] returnArray = new int[(nums.length - k +1)];
-	    int maxCounter = 0;
-	    LinkedList<Integer> tempList = new LinkedList<Integer>();
-	    returnArray[0] = nums[0];
-	    for(int i=0; i<k; i++) {
-	        tempList.add(nums[i]);
-	        if(nums[i]>returnArray[0]) {
-	            returnArray[0] = nums[i];
-	        }
-	    }
-	    maxCounter++;
-	    for(int i=k; i< nums.length; i++) {
-	        tempList.add(nums[i]);
-	        tempList.poll();
-		    returnArray[maxCounter]= calculateMax(tempList);
-		    maxCounter++;
+	    for(int i=0; i< nums.length-k+1; i++) {
+		    int[] tempArray = Arrays.copyOfRange(nums,i,i+k);
+		    returnArray[i]= calculateMax(tempArray);
 	    }        
 	    return returnArray;
     }
     
-    private int calculateMax(LinkedList<Integer> input) {
+    private int calculateMax(int[] input) {
 	    int max = -10000000;
-	    for (Integer integer : input) {
-		    if(integer>max) {
-			    max = integer;
+	    for(int i=0; i<input.length; i++) {
+		    if(input[i]>max) {
+			    max = input[i];
     		}
 	    }
 	    return max;
