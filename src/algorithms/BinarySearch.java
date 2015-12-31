@@ -91,7 +91,6 @@ public class BinarySearch {
 			return -1;
 		}
 		int midIndex = (lowerIndex + higherIndex)/2;
-		System.out.println(midIndex);
 		if(array[midIndex]==n) {
 			return midIndex;
 		} else if(array[midIndex]>n) {
